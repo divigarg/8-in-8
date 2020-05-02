@@ -2,10 +2,12 @@ import argparse
 import os, sys
 #repeat_check func
 def repeat_check(index,lines):
-    if index!=len(lines)-1 and lines[index]==lines[index+1]: 
-        return True
-    else:
-        return False
+    try:
+        if lines[index].rstrip()==lines[index+1].rstrip(): 
+            return True
+    except:
+        pass
+    return False
 
 #printing_line definiition
 def printing_line(index,lines,counting,count):
@@ -44,6 +46,4 @@ def main():
     counting=args.count
     read_line(input_file,counting)
 
-hello=True
-print("hello")
 main()
