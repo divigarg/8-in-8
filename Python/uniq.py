@@ -76,9 +76,9 @@ def setup_parser():
     d_u.add_argument('-u','--unique',action='store_true',help='only prints unique lines')
     parser.add_argument('-D','--all-repeated',action='store_true',help='print all duplicate lines')
     # parser.add_argument('--all-repeated',action='store',metavar='=METHOD',choices=['none','seperate','prepend'])
-    parser.add_argument('-f','--skip-fields',help='avoid comparing the first N fields',metavar='N',type=int,default=0)
+    parser.add_argument('-f','--skip-fields',help='avoid comparing the first N fields',metavar='\b[=N]',type=int,default=0)
     parser.add_argument('-i','--ignore-case',action='store_true',help='ignore differences in case when comparing')
-    parser.add_argument('-s','--skip-chars',metavar='N',action='store',default=0,type=int,help='avoid comparing the first N chars')
+    parser.add_argument('-s','--skip-chars',metavar='\b[=N]',action='store',default=0,type=int,help='avoid comparing the first N chars')
     parser.add_argument('input',metavar='INPUT',action='store',type=str,default='-',nargs='?',help='the file(s) to handle')
     return parser
 #main func
