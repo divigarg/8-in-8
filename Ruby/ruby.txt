@@ -1,0 +1,151 @@
+********************
+GENERAL CONCEPTS
+********************
+
+1. Purely Object Oriented language - if the language supports first order objects.
+   : Functions are also objects, and data is also object. There is nothing that
+   is not at object.
+
+   Everything in Ruby inherts from the base class called "Object".
+   4, {puts "Hi"}, "Class" <- "Object".
+
+2. Purely Functional Language : Haskell.
+    In haskell ""everything is a function"". You can pass functions, you can
+    partially use functions, etc. "First Order/higher order functions."
+
+3. "Interface".
+    C++ : one class can inherit from multiple classes.
+    Java : single inhertiance.
+    Ruby : single inheritance.
+
+    """ """
+     |  |
+      """
+ Interface : It is not a class. You cannot instantiate it. interface -/-> object
+ class --> object.
+
+ interface I {
+    a,b;
+    m1();
+    m2();
+
+ }
+
+ class A implements I {
+    a,b;
+    m1{
+
+    }
+
+    m2{
+
+    }
+
+    c,d,e,f
+    m3{
+    }
+    m4{
+    }
+
+ }
+
+ class B implements I {
+        m5{
+
+        }
+
+        m6{
+
+        }
+    }
+
+************************
+LEARNING A LANGUAGE
+************************
+
+1. What is the programming model?
+
+2. What is the syntax.
+
+3. Typing.
+
+4. What are the caveats. : 0 is True for Ruby
+
+
+*********
+TYPING : The Little Typer
+*********
+
+0. Strong vs Weak - Ruby is strongly typed. JavaScript is weak typed language.
+There is better type safety. To avoid runtime errors.
+
+1. Static vs Dynamic - Static means that the type is determined at compile
+time/time of writing the code. Dynamic means that the type is determined at
+runtime (or when code is actually executed). With Java even if you use a JIT
+(just in time compilation ~ interpreted).
+
+3/2. Duck Typing - 'Duck Type' : If it swims like a duck, walks like a duck and
+quacks like a duck it probably is a duck.
+If you have different types that support the same method, you can write type
+agnostic code.
+
+"..........."       ".............."
+    \                    /
+     \                  /
+      \                /
+       ">>>>>>>>>>>>>>>>"
+
+2. Manifest vs Inferred - In manifest you explicitly give the type and in
+inferred the type is automatically deduced.
+
+3. Nominal vs Structural -
+
+struct p {
+    int a;
+    int b;
+};
+
+struct q {
+    int c;
+    int d;
+};
+
+in nominal typing "struct p" and "struct q"
+
+int max(struct p *pp){
+   a>b? a:b;
+}
+
+max (q)
+
+Structural - OCaml, Go.
+
+*******
+RUBY
+*******
+
+Decisions:
+
+in Ruby, everything evaulates to either true or false or nil.
+And, everything apart from nil and false, evaluates to true.
+
+1. In Java you cannot define functions. To define functions you need to define
+classes. This is not true for C++ or Ruby.
+
+2. Arrays can be heterogeneous.
+
+3. Ruby supports Duck Typing.
+
+4. Symbols
+
+5. Code Blocks - yield. block.call
+
+********
+CLOJURE
+********
+
+In a language called clojure. This is a function class element function/object
+coupled with an environment (mapping of variables to their values in the context
+in which was created). Code + environment.
+
+
