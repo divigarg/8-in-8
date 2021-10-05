@@ -39,14 +39,12 @@ def get_match(line,pattern,word_only,line_only):
     else:
         return ''
 
-#def print_result
-def print_result(file,result,lineno,line_no):
+def print_result(file, result, lineno, line_no):
     if lineno==True:
         result=BLUE+str(line_no)+END+" "+result
     sys.stdout.write(result)
 
-#def grep_file
-def grep_file(file,pattern,word_only,line_only,lineno):
+def grep_file(file, pattern, word_only, line_only, lineno):
     file_open= sys.stdin if file=='(standard input)' else open(file,'r')
     line=file_open.readline()
     line_no=1
@@ -59,15 +57,14 @@ def grep_file(file,pattern,word_only,line_only,lineno):
     file_open.close()
 
 
-#define grep_files
-def grep_files(files,pattern,word_only,line_only,lineno):
+def grep_files(files, pattern, word_only, line_only, lineno):
     for file in files:
         if os.path.isfile(file) or file=='(standard input)':
             grep_file(file,pattern,word_only,line_only,lineno)
         else:
             sys.stdout.write('grep: %s: Is a directory\n' % file)
 
-#define parser
+
 def setup_parser():
     parser=argparse.ArgumentParser(prog='grep',description='Find matches of patterns'\
         'in the lines of file(s)')
@@ -80,7 +77,7 @@ def setup_parser():
     return parser
 
 
-# main fun
+
 def main():
     parser=setup_parser()
     args=parser.parse_args()
